@@ -1,0 +1,16 @@
+%h2= t :title_forgot, scope:[:devise,:password]
+.row
+  .col-sm-4.col-md-offset-4
+    = form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+      = devise_error_messages!
+      .form-group
+        = f.label :email
+        %br
+        = f.email_field :email, autofocus: true,class:"form-control"
+      .form-group
+        = f.label :name
+        %br
+        = f.text_field :name, class:"form-control"
+      .form-group
+        = f.submit t(:reset_password, scope:[:devise,:password]),class:"btn btn-primary"
+= render "devise/shared/links"

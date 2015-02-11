@@ -1,0 +1,46 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+$gray: #eaeaea;
+#logo{
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #FFF;
+  float: left;
+  text-transform: uppercase;
+  &:hover{
+    text-decoration: none;
+  }
+}
+footer{
+  margin-top: 30px;
+  padding-top: 5px;
+  border-top: 2px solid $gray;
+  clear: both;
+  small{
+    float:left;
+  }
+  ul{
+    float: right;
+    list-style: none;
+    li{
+      float: left;
+      margin-left: 15px;
+    }
+  }
+}
+.pagination{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+.add-comment{
+  clear: both;
+  //border-top: 2px solid $gray;
+}
+.table, .table-bordered, .table-hover, table th{
+  text-align: center;
+}
+ul li.nav-li{
+    margin-top: 13px;
+}
+

@@ -1,0 +1,10 @@
+$(document).ready(function(){
+  $("#new_comment").on("ajax:success",function(){
+    var string = '<table class="table table-bordered table-hover"><tr><th>Commenter</th><th>Comment</th>'+'<th>File Attached</th> <th colspan="2"><%= t :action%></th></tr>'
+      +'<%=escape_javascript(render  @comments)%>'
+      +'</table><div class="pull-right"><%= will_paginate @comments %></div>';
+    $("#list_comments").html(string);
+    $("#comment_body").val('');
+    $("#comment_file_upload").val('');
+  });
+});

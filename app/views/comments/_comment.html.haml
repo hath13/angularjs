@@ -1,0 +1,12 @@
+%tr
+  %td= comment.commenter
+  %td= comment.body
+  - if comment.file_upload?
+    %td= link_to comment.file_upload_file_name, comment.file_upload.url
+  - else
+    %td
+  %td= link_to 'Destroy Comment', [comment.post, comment],class:'delete_comment', remote: true,
+      method: :delete,
+      data: { confirm: 'Are you sure?' }
+  %td= comment.created_at
+

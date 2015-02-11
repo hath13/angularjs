@@ -1,0 +1,29 @@
+%h2= t ".title"
+.table-responsive
+  %table.table.table-bordered.table-hover
+    %tr
+      %th= t ".poster"
+      %th= t ".title_post"
+      %th= t ".text"
+      %th= t ".total_comments"
+      %th{colspan:"3"}= t(:action)
+    - @posts.each do|a|
+      %tr
+        %td
+          = current_user.email
+        %td
+          = a.title
+        %td
+          = a.text
+        %td
+          = a.comments.count
+        %td
+          = link_to t(:show), a
+        %td
+          = link_to t(:edit), edit_post_path(a)
+        %td
+          = link_to t(:delete), a, method: :delete,data: {confirm: t(:delete_confirm)}
+  .pull-right
+    = will_paginate
+  .pull-left
+    = link_to t(:new_post,scope: [:posts,:new]), new_post_path

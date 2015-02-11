@@ -1,0 +1,10 @@
+!!!5
+%html
+  %head
+    %meta{content:'text/html; charset=UTF-8', http-equiv:'Content-Type'}
+  %body
+    %p= t(".incoming_comment")
+    %p= @comment.commenter
+    %p= t(".body_comment")
+    %p= @comment.body
+    %p= link_to t(".back_to_current_post"),post_url(id: @comment.post_id)

@@ -1,0 +1,4 @@
+%p=t(:hello),scope:[:devise:mailer,:reset_password_instructions],email: @resource.email
+%p= t(:notice), scope:[:devise:mailer,:unlock_instructions]
+%p= t(:notice_unlock), scope:[:devise:mailer,:unlock_instructions]
+%p= link_to t (:unlock_account,scope:[:devise:mailer,:unlock_instructions]), unlock_url(@resource, unlock_token: @token)
