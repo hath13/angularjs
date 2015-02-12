@@ -18,7 +18,7 @@ app.directive "popupEmail",
     user_email: "=user"
   }
   templateUrl: "assets/popup_email_form.html"
-  link: (scope) ->
+  link: (scope, element, attrs) ->
     scope.myClick = () ->
       obj = {
         data: {
@@ -29,3 +29,4 @@ app.directive "popupEmail",
         }
       }
       scope.submit_email()(obj)
+    console.log element+'element'

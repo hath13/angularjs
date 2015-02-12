@@ -15,13 +15,16 @@
 //= require jquery_ujs
 //= require jquery.remotipart
 //= require jquery_validate
-
 //= require bootstrap
 //= require angular
 //= require angular-route
 //= require js-routes
 //= require ng-table
 //= require demoApp
+//= require_tree ./controllers
+//= require_tree ./services
+//= require_tree ./directives
+//= require_tree ./filters
 //= require_tree .
 
 $(document).on('ready page:load', function() {
