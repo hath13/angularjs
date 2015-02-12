@@ -1,0 +1,8 @@
+
+<td ng-show="tab_received">{{emailInfo.from}}</td>
+<td ng-show="!tab_received">{{emailInfo.to}}</td>
+<td>{{emailInfo.title}}</td>
+<td ng-show="tab_received">{{emailInfo.is_read | checkRead}}</td>
+
+
+

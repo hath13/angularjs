@@ -1,0 +1,1 @@
+json.email @email, :from, :to, :title, :body, :id, :is_read

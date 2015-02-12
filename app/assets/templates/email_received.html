@@ -1,0 +1,34 @@
+<h2>List Emails</h2>
+<div class="table-responsive" >
+  <table class="table table-bordered table-hover" ng-table="tableReceivedEmail" template-pagination="custom/pager_received">
+    <thead>
+      <tr>
+          <th>
+            From
+          </th>
+          <th ng-show="false">
+            To
+          </th>
+          <th>
+            Title
+          </th>
+          <th>
+            Readed
+          </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="email in received_emails" detail-email info="email" ng-click="showEmail(email,$index,true)" received="show.received_email">
+      </tr>
+    </tbody>
+  </table>
+</div>
+<script id="custom/pager_received" type="text/ng-template">
+  <div class="ng-cloak ng-table-pager text-center">
+    <ul class="pagination ng-table-pagination">
+      <li ng-class="{&#39;disabled&#39;: !page.active}" ng-repeat="page in pages" ng-switch="page.type">
+        <a href="" ng-click="params.page(page.number)" ng-switch-when="prev"> «</a><a href="" ng-click="params.page(page.number)" ng-switch-when="first"><span ng-bind="page.number"></span></a><a href="" ng-click="params.page(page.number)" ng-switch-when="page"><span ng-bind="page.number"></span></a><a href="" ng-click="params.page(page.number)" ng-switch-when="more"> …</a><a href="" ng-click="params.page(page.number)" ng-switch-when="last"><span ng-bind="page.number"></span></a><a href="" ng-click="params.page(page.number)" ng-switch-when="next"> »</a>
+      </li>
+    </ul>
+  </div>
+</script>

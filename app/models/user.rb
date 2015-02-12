@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
           authentication_keys: [:login]
   validates :name, uniqueness: {case_sensitive: false}, length: {minimum: 6}
   has_many :posts, dependent: :destroy
+  has_many :detail_emails, dependent: :destroy
   has_attached_file :avatar,
                     path: ":rails_root/public/system/:attachment/:id/:style/:basename.:extension",
                     url: "/system/:attachment/:id/:style/:basename.:extension",

@@ -1,0 +1,17 @@
+<div class="col-md-4 col-md-offset-4" >
+  <form>
+    <div class="form-group">
+      <label>title </label>
+      <br/>
+      <input type = "text" name="title" class="form-control" ng-model = "post.title" >
+    </div>
+    <div class="form-group">
+      <label>Body </label>
+      <br/>
+      <textarea class= "form-control" ng-model="post.text" ></textarea>
+    </div>
+    <div class="form-group">
+      <input type="submit" class="btn btn-primary" ng-click="save_post(post)" >
+    </div>
+  </form>
+</div>

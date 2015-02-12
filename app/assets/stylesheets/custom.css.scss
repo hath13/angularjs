@@ -43,4 +43,10 @@ footer{
 ul li.nav-li{
     margin-top: 13px;
 }
-
+.navbar-nav {
+  li {
+    .dropdown-menu {
+      width: 460px;
+    }
+  }
+}

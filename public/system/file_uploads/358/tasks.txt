@@ -1,0 +1,38 @@
+- We need a way to attach an advocate to a candidate picture. On the election
+administration page in the subsection "Add Candidate" of the section labeled
+"Admin Edit an Election" the advocatecs should be added into the list of
+possible users or I prefer adding a way to enter a advocatec name under the
+"candidate username" box. The admin can either choose a user or a advocatec
+to be "connected" to that candidate.
+==> 0.5
+
+- The "suggest an election" button on the .../elections/1 page should be
+redirected to ...elections/1/new_election rather than
+.../elections/1/suggest_election/new
+0.5
+
+- I think the layout of the "make a decision" dialog should be in 1 column. I guess
+it saves a little space with 2 columns. What do you think? See attachment.
+0.5
+
+- When the "make a decision" dialog opens, every box should be blank (unless
+the user has existing choices). Its prejudicial to have the first candidate chosen
+in every box.
+0.5
+
+- On issues pages, for each viewpoint entry, add 2 lines to the end of the entry:
+an empty line and a line that has "more..." right justified. Clicking on the
+"more..." would get you to the viewpoint page the same as clicking on the
+https://trello.com/c/S5yLTj45/193-voterprep-fixes
+1/5
+8/29/2014
+Voterprep Fixes on Voterprep Development | Trello
+"more..." would get you to the viewpoint page the same as clicking on the
+viewpoint entry title
+0.5
+
+- On advocate pages (".../advocates/advocate-name"), change the "Activity"
+item to "Viewpoints" and keep a list of viewpoints for that advocate on that
+page.
+= 0.25
+

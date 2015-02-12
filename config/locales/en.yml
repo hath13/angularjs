@@ -1,0 +1,89 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  #model
+  activerecord:
+    models:
+      attributes:
+        post:
+          title: "Title"
+          text: "Text"
+        comment:
+          commenter: "Commenter"
+          body: "Comment"
+          file_upload: "File Attached"
+    errors:
+      models:
+        post:
+          attributes:
+            title:
+              blank: "Title can't be blank"
+              too_short: "Title is too short(minimum is 6 characters)"
+
+  #mailer
+  user_mailer:
+    send_incoming_comment:
+      incoming_comment: "Incoming comment "
+      body_comment: "Body comment"
+      back_to_current_post: "Back to current post"
+  #edit post
+  posts:
+    edit:
+      title: "Edit Post"
+  #index post
+    index:
+      title: "List Posts"
+      poster: "Poster"
+      total_comments: "Total Comments"
+  #new post
+    new:
+      title: "New Post"
+  #show post
+    show:
+      title: "Post of %{email_user}"
+  #common lable
+  back: "Back to Posts"
+  back_devise: "Back"
+  show: "Show"
+  edit: "Edit"
+  delete: "Delete"
+  delete_confirm: "Are you sure ?"
+  title_post: "Title"
+  text: "Text"
+  comments: "Comments"
+  add_comment: "Add a comment"
+  title_app: "Sample App"
+  login: "Login"
+  logout: "Logout"
+  signup: "Sign Up"
+  profile: "Profile"
+  settings: "Settings"
+  about: "About"
+  contact: "Contact"
+  rails: "Rails Tutorial"
+  author: "Michael Hartl"
+  news: "News"
+  unhappy: "Unhappy?"
+  characters_minimum: "characters minimum"
+  update: "Update"
+  action: "Action"
+  delete_comment: "Delete Comment"

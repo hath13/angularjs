@@ -1,0 +1,51 @@
+
+<h2>title</h2>
+<div class="table-responsive" ng-controller="ShowPostsCtr">
+  <table class="table table-bordered table-hover" >
+    <tr>
+      <th>
+        poster
+      </th>
+      <th>
+        title
+      </th>
+      <th>
+        text
+      </th>
+      <th>
+        total_comments
+      </th>
+      <th colspan="3">
+        <%= t(:action) %>
+      </th>
+    </tr>
+    <!-- - @posts.each do|a|
+    -->
+    <tr ng-repeat="post in posts">
+      <td>
+        post.user_id
+      </td>
+      <td>
+        {{post.title}}
+      </td>
+      <td>
+        {{post.text}}
+      </td>
+      <td>
+        {{post.comments.count}}
+      </td>
+      <td>
+        <a href="" ng-click="post_form(post)">Edit</a>
+      </td>
+      <td>
+        <!-- = link_to t(:delete), post, method: :delete,data: {confirm: t(:delete_confirm)}
+        -->
+      </td>
+    </tr>
+  </table>
+  <br/>
+  <a href="" ng-click="post_form()">New Post</a>
+  <br/>
+  <div ng-include = "'assets/post_form.html'" ng-show= "show" ></div>
+</div>
+

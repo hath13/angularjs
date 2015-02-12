@@ -4,6 +4,21 @@
     %nav
       %ul.nav.navbar-nav.navbar-right
         -if user_signed_in?
+          %li.dropdown.nav-li
+            %a.dropdown-toggle{"href" => "#", "data-toggle" => "dropdown", "ng-model" => "total_unread_email"}
+              Notification
+              %span.badge
+                {{total_unread_email}}
+              %b.caret
+            %ul.dropdown-menu
+              %li
+                %a{"ng-repeat"=>"unread in unread_emails","detail-email"=>"","info"=>"unread","data-toggle"=>"modal","data-target"=>"{{'#'+modal.detail_email+$index}}", "ng-click"=> "updateUnreadEmail(unread,$index,false)","received" => "true","href"=> ""}
+
+              %li
+                %div{"ng-include"=>'"assets/popup_email_form.html"'}
+                %a.btn.btn-primary{"type"=>"button","data-toggle"=>"modal","data-target"=>"{{'#'+modal.new_email}}","href"=> "", "ng-click"=> "show.send_btn= true; modal_email='new'"}
+                  New Email
+
           %li.dropdown
             %a.dropdown-toggle{href:"#","data-toggle"=>"dropdown"}
               = image_tag current_user.avatar.url(:thumb)
@@ -17,3 +32,5 @@
           %li= link_to t(:login), new_user_session_path
     %p.notice= notice
     %p.alert= alert
+    %popup-email{"send"=>"sendEmail","detail"=>"unread_email","btn"=>"show.send_btn", "id"=>"modal_email", "user"=>"modal.current_email"}
+    %popup-email{"send"=>"sendEmail", "id"=>"modal_email", "user"=>"modal.current_email"}

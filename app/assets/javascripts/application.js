@@ -11,10 +11,40 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require jquery.remotipart
-//= require turbolinks
-//= require_tree .
 //= require jquery_validate
+
 //= require bootstrap
+//= require angular
+//= require angular-route
+//= require js-routes
+//= require ng-table
+//= require demoApp
+//= require_tree .
+
+$(document).on('ready page:load', function() {
+  angular.bootstrap(document.body, ['emailApp']);
+  $("#menu li").on("click", function() {
+    $(this).addClass("active");
+    $(this).siblings().removeClass("active");
+  });
+
+  var availableEmails = [
+      "hath14@hath.hath",
+      "hath13@hath.hath",
+      "hath7@hath.hath",
+      "hath6@hath.hath",
+      "hath5@hath.hath",
+      "hath4@hath.hath",
+      "hath3@hath.hath",
+      "hath2@hath.hath",
+      "hath1@hath.hath",
+    ];
+    $("#popup_to_email").autocomplete({
+      source: availableEmails
+    });
+});
+
 

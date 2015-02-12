@@ -1,0 +1,10 @@
+
+%ul#menu.nav.nav-pills.nav-stacked
+  %li.active
+    %a{"href" => "javascript:;", "ng-click" => "showTab(true,false,true)", "ng-model" => "total_unread_email"}
+      Inbox
+      %span.badge
+        {{total_unread_email}}
+  %li
+    %a{"href" => "javascript:;", "ng-click" => "showTab(false,true,false)"}
+      Sent
