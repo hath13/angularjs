@@ -29,4 +29,22 @@ app.directive "popupEmail",
         }
       }
       scope.submit_email()(obj)
-    console.log element+'element'
+
+app.directive "validateEmail",
+() ->
+  # EMAIL_REGEXP = /^([a-zA-Z0-9_.-\+])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9,]{2,4})+$/
+  {
+    restrict: "A"
+    require: '^popupEmail'
+    link: (scope, element, attrs) ->
+      email_arr = scope.email.email_to.split(",")
+      console.log email_arr
+      i = 0
+      while i < email_arr.length
+        if !EMAIL_REGEXP.test(email_arr[i])
+          scope.send_btn = false
+          return false
+        i++
+  }
+
+
